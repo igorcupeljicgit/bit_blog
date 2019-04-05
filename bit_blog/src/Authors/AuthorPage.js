@@ -13,20 +13,20 @@ class AuthorPage extends React.Component {
     }
 
     componentDidMount() {
+        this.authorLoad()
+    }
+    authorLoad() {
+
         authorService.fetchAuthors()
             .then((author) => {
                 this.setState({
                     authorlist: author
                 })
-
-
             })
 
-
-
-
-
     }
+
+
 
 
 

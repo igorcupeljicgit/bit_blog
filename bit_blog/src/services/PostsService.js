@@ -27,7 +27,17 @@ class PostService {
                     });
             })
     }
+    fetchAuthorPosts(id) {
+        const userEndpoint = `${ApiBase}posts?userId=${id}`;
+        return fetch(userEndpoint)
+            .then(response => {
+                return response.json();
+            }).then((apiAllPosts) => {
+                return apiAllPosts.slice(0, 5)
+            })
+    }
 }
+
 
 
 

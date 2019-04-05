@@ -15,6 +15,8 @@ class AuthorDetail extends Component {
     }
     componentDidMount() {
         const id = this.props.match.params.id;
+
+
         authorService.fetchAutor(id)
             .then((author) => {
                 console.log(author)
@@ -65,7 +67,16 @@ class AuthorDetail extends Component {
 
                             </div>
 
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6615.3547609572615!2d-118.26301337564676!3d34.00081958643358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBINCQ0L3RktC10LvQtdGBLCDQmtCw0LvQuNGE0L7RgNC90LjRmNCwLCDQodGY0LXQtNC40ZrQtdC90LUg0JTRgNC20LDQstC1!5e0!3m2!1ssr!2srs!4v1554391465201!5m2!1ssr!2srs" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+                            <iframe
+                                width="300"
+                                height="170"
+                                frameborder="0"
+                                scrolling="no"
+                                marginheight="0"
+                                marginwidth="0"
+                                src={`https://maps.google.com/maps?q= {${Author.address.geo.lat} , ${Author.address.geo.lng}'&hl=es;z=14&amp;output=embed`}
+                            >
+                            </iframe>
                         </div>
                     </div>
                 </div>

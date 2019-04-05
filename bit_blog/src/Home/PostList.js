@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 
 import { PostItem } from "./PostItem";
 
+
 const PostList = (props) => {
     const postArr = props.posts.map((element) => {
         return (

@@ -5,6 +5,7 @@ import { About } from '../About/About';
 import { AuthorPage } from '../Authors/AuthorPage';
 import { PostDetail } from '../Home/PostDetail';
 import { AuthorDetail } from '../Authors/AuthorDetail';
+import { NewPost } from "./NewPost"
 
 
 class Main extends Component {
@@ -13,6 +14,7 @@ class Main extends Component {
 
             <>
                 <Switch>
+                    <Route path="/posts/new" component={NewPost} />
                     <Route path="/authors/:id" component={AuthorDetail} />
                     <Route path="/posts/:id" component={PostDetail} />
                     <Route path="/authors" component={AuthorPage} />

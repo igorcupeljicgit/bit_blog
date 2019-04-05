@@ -1,9 +1,12 @@
 import React from "react"
 
 const PostItem = (props) => {
-
-
     const singlepost = props.onepost
+
+
+
+
+
     return (
         <>
             <div className="row">
